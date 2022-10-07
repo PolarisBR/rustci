@@ -18,12 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check
-        run: pwd && ls -al
-      - name: Linting
+      - name: Linting code base
         run: cargo clippy --all-features
       - name: Build
         run: cargo build --verbose
-      - name: Test
+      - name: Running tests
         run: cargo test --verbose
         
