@@ -17,9 +17,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check
+        run: pwd
       - name: Linting
         working-directory: ./app
-        run: pwd && cargo clippy --all-features
+        run: cargo clippy --all-features
       - uses: actions/checkout@v3
       - name: Build
         run: cargo build --verbose
