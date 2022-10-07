@@ -10,11 +10,10 @@ mod tests {
 
     #[test]
     fn advanced_test() -> Result<(), String> {
-        if 2+ 2 == 4 {
+        if 2 + 2 == 4 {
             Ok(())
-        } else { 
+        } else {
             Err(String::from("not verified"))
         }
     }
-
 }
