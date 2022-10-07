@@ -17,11 +17,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # - run: rustup component add clippy
-      # - uses: actions-rs/clippy-check@v1
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     args: --all-features
+      - name: Linting
+        run: cargo clippy --all-features
       - uses: actions/checkout@v3
       - name: Build
         run: cargo build --verbose
