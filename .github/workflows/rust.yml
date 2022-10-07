@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Linting
+        working-directory: ./app
         run: cargo clippy --all-features
       - uses: actions/checkout@v3
       - name: Build
