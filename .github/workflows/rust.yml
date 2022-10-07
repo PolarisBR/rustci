@@ -11,8 +11,9 @@ env:
 
 jobs:
   build:
-    needs:
-      - clippy_check
+    defaults:
+      run:
+        working-directory: app
     runs-on: ubuntu-latest
     steps:
       - run: rustup component add clippy
