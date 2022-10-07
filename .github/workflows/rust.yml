@@ -11,6 +11,8 @@ env:
 
 jobs:
   build:
+    needs:
+      - clippy_check
     defaults:
       run:
         working-directory: ./app
